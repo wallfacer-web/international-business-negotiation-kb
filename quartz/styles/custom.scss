@@ -1,3 +1,197 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+:root {
+  --portal-shadow: 0 18px 50px rgba(31, 43, 47, 0.08);
+  --portal-border: 1px solid color-mix(in srgb, var(--secondary) 12%, white);
+  --portal-radius: 18px;
+}
+
+body {
+  background:
+    radial-gradient(circle at top left, rgba(185, 130, 62, 0.12), transparent 30%),
+    radial-gradient(circle at top right, rgba(28, 92, 90, 0.12), transparent 26%),
+    linear-gradient(180deg, #f8f4ec 0%, var(--light) 35%, #f7f3eb 100%);
+}
+
+body[saved-theme="dark"] {
+  background:
+    radial-gradient(circle at top left, rgba(241, 186, 114, 0.12), transparent 28%),
+    radial-gradient(circle at top right, rgba(140, 209, 200, 0.12), transparent 24%),
+    linear-gradient(180deg, #0d191b 0%, var(--light) 40%, #122427 100%);
+}
+
+.page {
+  max-width: 1720px;
+}
+
+.page-title {
+  letter-spacing: 0.01em;
+
+  a {
+    color: var(--dark);
+  }
+}
+
+.sidebar.left,
+.sidebar.right {
+  gap: 1rem !important;
+}
+
+.sidebar.left > *,
+.sidebar.right > * {
+  background: color-mix(in srgb, var(--light) 78%, white);
+  border: var(--portal-border);
+  border-radius: var(--portal-radius);
+  box-shadow: var(--portal-shadow);
+  padding: 1rem 1.1rem;
+  backdrop-filter: blur(10px);
+}
+
+body[saved-theme="dark"] .sidebar.left > *,
+body[saved-theme="dark"] .sidebar.right > * {
+  background: color-mix(in srgb, var(--light) 86%, black);
+}
+
+.sidebar.left > .page-title,
+.sidebar.left > .mobile-only,
+.sidebar.left > .spacer {
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  padding: 0;
+}
+
+.explorer.desktop-only,
+.explorer {
+  overflow: hidden;
+}
+
+.explorer .title-button,
+.search > .search-button {
+  border-radius: 12px !important;
+  border: 1px solid color-mix(in srgb, var(--secondary) 18%, white) !important;
+  background: color-mix(in srgb, var(--light) 92%, white) !important;
+}
+
+.search > .search-button {
+  height: 2.4rem !important;
+}
+
+.page article {
+  background: color-mix(in srgb, var(--light) 84%, white);
+  border: var(--portal-border);
+  border-radius: 28px;
+  box-shadow: 0 24px 70px rgba(31, 43, 47, 0.08);
+  padding: 2.2rem 2.4rem;
+  position: relative;
+}
+
+body[saved-theme="dark"] .page article {
+  background: color-mix(in srgb, var(--light) 88%, black);
+}
+
+.page article::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 10px;
+  border-radius: 28px 28px 0 0;
+  background: linear-gradient(90deg, var(--secondary), var(--tertiary));
+}
+
+.page article > h1:first-of-type {
+  font-size: clamp(2.2rem, 4vw, 3.2rem);
+  line-height: 1.12;
+  margin-top: 0.4rem;
+  margin-bottom: 1.1rem;
+  color: var(--dark);
+}
+
+.page article > h2,
+.page article > h3 {
+  color: var(--dark);
+  letter-spacing: 0.01em;
+}
+
+.page article > h2 {
+  margin-top: 2.4rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--secondary) 18%, transparent);
+}
+
+.page article p,
+.page article li {
+  font-size: 1rem;
+  line-height: 1.9;
+}
+
+.page article ul,
+.page article ol {
+  padding-left: 1.3rem;
+}
+
+a.internal {
+  border-radius: 999px !important;
+  padding: 0.12rem 0.55rem !important;
+  background: color-mix(in srgb, var(--secondary) 12%, white) !important;
+  border: 1px solid color-mix(in srgb, var(--secondary) 18%, transparent);
+}
+
+a.internal:hover,
+a.external:hover {
+  color: var(--dark) !important;
+}
+
+blockquote,
+.callout {
+  border-radius: 18px !important;
+  border: 1px solid color-mix(in srgb, var(--tertiary) 22%, transparent) !important;
+  box-shadow: 0 14px 35px rgba(31, 43, 47, 0.06);
+}
+
+.callout {
+  background: color-mix(in srgb, var(--light) 90%, white);
+}
+
+body[saved-theme="dark"] .callout {
+  background: color-mix(in srgb, var(--light) 92%, black);
+}
+
+code {
+  border-radius: 8px;
+}
+
+pre {
+  border-radius: 18px;
+  border: 1px solid color-mix(in srgb, var(--secondary) 12%, transparent);
+}
+
+.graph > .graph-outer,
+.toc,
+.backlinks,
+footer {
+  border-radius: var(--portal-radius);
+}
+
+footer {
+  background: color-mix(in srgb, var(--light) 80%, white);
+  border: var(--portal-border);
+  box-shadow: var(--portal-shadow);
+  padding: 1.1rem 1.2rem;
+  margin-top: 1rem;
+}
+
+body[saved-theme="dark"] footer {
+  background: color-mix(in srgb, var(--light) 88%, black);
+}
+
+@media all and (max-width: 800px) {
+  .page article {
+    padding: 1.5rem 1.1rem;
+    border-radius: 22px;
+  }
+
+  .page article::before {
+    border-radius: 22px 22px 0 0;
+  }
+}
