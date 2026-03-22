@@ -1,35 +1,42 @@
 @use "./base.scss";
 
 :root {
-  --portal-shadow: 0 18px 50px rgba(31, 43, 47, 0.08);
-  --portal-border: 1px solid color-mix(in srgb, var(--secondary) 12%, white);
-  --portal-radius: 18px;
+  --portal-shadow: 0 24px 80px rgba(18, 30, 25, 0.08);
+  --portal-shadow-soft: 0 10px 28px rgba(18, 30, 25, 0.06);
+  --portal-border: 1px solid color-mix(in srgb, var(--secondary) 10%, white);
+  --portal-radius: 22px;
 }
 
 body {
   background:
-    radial-gradient(circle at top left, rgba(185, 130, 62, 0.12), transparent 30%),
-    radial-gradient(circle at top right, rgba(28, 92, 90, 0.12), transparent 26%),
-    linear-gradient(180deg, #f8f4ec 0%, var(--light) 35%, #f7f3eb 100%);
+    radial-gradient(circle at top left, rgba(15, 118, 110, 0.14), transparent 28%),
+    radial-gradient(circle at top right, rgba(249, 115, 22, 0.12), transparent 22%),
+    linear-gradient(180deg, #fbfcfa 0%, var(--light) 36%, #f5f7f3 100%);
 }
 
 body[saved-theme="dark"] {
   background:
-    radial-gradient(circle at top left, rgba(241, 186, 114, 0.12), transparent 28%),
-    radial-gradient(circle at top right, rgba(140, 209, 200, 0.12), transparent 24%),
-    linear-gradient(180deg, #0d191b 0%, var(--light) 40%, #122427 100%);
+    radial-gradient(circle at top left, rgba(52, 211, 153, 0.12), transparent 28%),
+    radial-gradient(circle at top right, rgba(251, 146, 60, 0.12), transparent 22%),
+    linear-gradient(180deg, #0a1211 0%, var(--light) 42%, #0e1816 100%);
 }
 
 .page {
-  max-width: 1720px;
+  max-width: 1760px;
 }
 
 .page-title {
-  letter-spacing: 0.01em;
+  letter-spacing: -0.03em;
+  font-weight: 700;
 
   a {
     color: var(--dark);
   }
+}
+
+.page .popover-hint,
+.page .content-meta {
+  color: var(--gray);
 }
 
 .sidebar.left,
@@ -39,17 +46,17 @@ body[saved-theme="dark"] {
 
 .sidebar.left > *,
 .sidebar.right > * {
-  background: color-mix(in srgb, var(--light) 78%, white);
+  background: color-mix(in srgb, var(--light) 84%, white);
   border: var(--portal-border);
   border-radius: var(--portal-radius);
-  box-shadow: var(--portal-shadow);
+  box-shadow: var(--portal-shadow-soft);
   padding: 1rem 1.1rem;
-  backdrop-filter: blur(10px);
+  backdrop-filter: blur(14px);
 }
 
 body[saved-theme="dark"] .sidebar.left > *,
 body[saved-theme="dark"] .sidebar.right > * {
-  background: color-mix(in srgb, var(--light) 86%, black);
+  background: color-mix(in srgb, var(--light) 90%, black);
 }
 
 .sidebar.left > .page-title,
@@ -66,63 +73,74 @@ body[saved-theme="dark"] .sidebar.right > * {
   overflow: hidden;
 }
 
+.explorer .title-button > h2,
+.page-title {
+  font-family: var(--titleFont);
+}
+
 .explorer .title-button,
 .search > .search-button {
-  border-radius: 12px !important;
-  border: 1px solid color-mix(in srgb, var(--secondary) 18%, white) !important;
-  background: color-mix(in srgb, var(--light) 92%, white) !important;
+  border-radius: 14px !important;
+  border: 1px solid color-mix(in srgb, var(--secondary) 16%, white) !important;
+  background: color-mix(in srgb, var(--light) 96%, white) !important;
 }
 
 .search > .search-button {
-  height: 2.4rem !important;
+  height: 2.6rem !important;
+  box-shadow: 0 6px 18px rgba(18, 30, 25, 0.04);
 }
 
 .page article {
-  background: color-mix(in srgb, var(--light) 84%, white);
+  background: color-mix(in srgb, var(--light) 86%, white);
   border: var(--portal-border);
-  border-radius: 28px;
-  box-shadow: 0 24px 70px rgba(31, 43, 47, 0.08);
-  padding: 2.2rem 2.4rem;
+  border-radius: 30px;
+  box-shadow: var(--portal-shadow);
+  padding: 2.4rem 2.6rem;
   position: relative;
+  overflow: hidden;
 }
 
 body[saved-theme="dark"] .page article {
-  background: color-mix(in srgb, var(--light) 88%, black);
+  background: color-mix(in srgb, var(--light) 92%, black);
 }
 
 .page article::before {
   content: "";
   position: absolute;
   inset: 0 0 auto 0;
-  height: 10px;
-  border-radius: 28px 28px 0 0;
-  background: linear-gradient(90deg, var(--secondary), var(--tertiary));
+  height: 220px;
+  opacity: 0.65;
+  background:
+    radial-gradient(circle at top left, color-mix(in srgb, var(--secondary) 20%, transparent), transparent 58%),
+    radial-gradient(circle at top right, color-mix(in srgb, var(--tertiary) 20%, transparent), transparent 44%);
+  pointer-events: none;
 }
 
 .page article > h1:first-of-type {
   font-size: clamp(2.2rem, 4vw, 3.2rem);
-  line-height: 1.12;
+  line-height: 1.04;
   margin-top: 0.4rem;
   margin-bottom: 1.1rem;
   color: var(--dark);
+  letter-spacing: -0.04em;
 }
 
 .page article > h2,
 .page article > h3 {
   color: var(--dark);
-  letter-spacing: 0.01em;
+  letter-spacing: -0.02em;
 }
 
 .page article > h2 {
   margin-top: 2.4rem;
-  padding-bottom: 0.35rem;
-  border-bottom: 1px solid color-mix(in srgb, var(--secondary) 18%, transparent);
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid color-mix(in srgb, var(--secondary) 16%, transparent);
 }
 
 .page article p,
 .page article li {
   font-size: 1rem;
-  line-height: 1.9;
+  line-height: 1.85;
 }
 
 .page article ul,
@@ -132,9 +150,10 @@ body[saved-theme="dark"] .page article {
 
 a.internal {
   border-radius: 999px !important;
-  padding: 0.12rem 0.55rem !important;
-  background: color-mix(in srgb, var(--secondary) 12%, white) !important;
-  border: 1px solid color-mix(in srgb, var(--secondary) 18%, transparent);
+  padding: 0.16rem 0.62rem !important;
+  background: color-mix(in srgb, var(--secondary) 11%, white) !important;
+  border: 1px solid color-mix(in srgb, var(--secondary) 16%, transparent);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.55);
 }
 
 a.internal:hover,
@@ -142,15 +161,20 @@ a.external:hover {
   color: var(--dark) !important;
 }
 
+.page article > ul:first-of-type > li,
+.page article > ol:first-of-type > li {
+  margin-bottom: 0.5rem;
+}
+
 blockquote,
 .callout {
-  border-radius: 18px !important;
-  border: 1px solid color-mix(in srgb, var(--tertiary) 22%, transparent) !important;
-  box-shadow: 0 14px 35px rgba(31, 43, 47, 0.06);
+  border-radius: 20px !important;
+  border: 1px solid color-mix(in srgb, var(--tertiary) 18%, transparent) !important;
+  box-shadow: 0 14px 36px rgba(18, 30, 25, 0.05);
 }
 
 .callout {
-  background: color-mix(in srgb, var(--light) 90%, white);
+  background: color-mix(in srgb, var(--light) 94%, white);
 }
 
 body[saved-theme="dark"] .callout {
@@ -162,7 +186,7 @@ code {
 }
 
 pre {
-  border-radius: 18px;
+  border-radius: 20px;
   border: 1px solid color-mix(in srgb, var(--secondary) 12%, transparent);
 }
 
@@ -173,10 +197,18 @@ footer {
   border-radius: var(--portal-radius);
 }
 
+.toc,
+.backlinks,
+.graph > .graph-outer,
+.search .search-space > *,
+.explorer .explorer-content {
+  box-shadow: var(--portal-shadow-soft);
+}
+
 footer {
-  background: color-mix(in srgb, var(--light) 80%, white);
+  background: color-mix(in srgb, var(--light) 88%, white);
   border: var(--portal-border);
-  box-shadow: var(--portal-shadow);
+  box-shadow: var(--portal-shadow-soft);
   padding: 1.1rem 1.2rem;
   margin-top: 1rem;
 }
@@ -186,12 +218,77 @@ body[saved-theme="dark"] footer {
 }
 
 @media all and (max-width: 800px) {
+  .page {
+    max-width: 100%;
+  }
+
+  .page > #quartz-body {
+    row-gap: 0.8rem !important;
+    padding: 0 0.75rem !important;
+  }
+
+  .sidebar.left,
+  .sidebar.right {
+    width: 100%;
+    gap: 0.75rem !important;
+    padding-top: 1rem !important;
+  }
+
+  .sidebar.left > *,
+  .sidebar.right > * {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 0.85rem 0.9rem;
+    border-radius: 18px;
+  }
+
+  .sidebar.left > .page-title {
+    width: 100%;
+    display: block;
+  }
+
+  .sidebar.left > .page-title a {
+    display: block;
+    padding: 0.1rem 0;
+  }
+
+  .sidebar.right .graph,
+  .sidebar.right .backlinks,
+  .sidebar.right .toc {
+    display: none !important;
+  }
+
+  .explorer .explorer-content {
+    max-height: 300px;
+    overflow: auto;
+  }
+
+  .search {
+    max-width: 100%;
+    width: 100%;
+  }
+
   .page article {
-    padding: 1.5rem 1.1rem;
-    border-radius: 22px;
+    padding: 1.35rem 1rem;
+    border-radius: 24px;
   }
 
   .page article::before {
-    border-radius: 22px 22px 0 0;
+    height: 140px;
+  }
+
+  .page article > h1:first-of-type {
+    font-size: 2rem;
+    line-height: 1.08;
+  }
+
+  .page article > h2 {
+    margin-top: 1.9rem;
+  }
+
+  .page article p,
+  .page article li {
+    font-size: 0.98rem;
+    line-height: 1.78;
   }
 }
