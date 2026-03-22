@@ -1,9 +1,13 @@
 .obsidian/
 .smart-env/
 .trash/
+.qsyncclient/
+node_modules/
+public/
+_quartz_init/
+.quartz-cache/
 Thumbs.db
 .DS_Store
 desktop.ini
-.qsyncclient/
 20 智能体/
 notebooklm-py/
