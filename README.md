@@ -22,13 +22,14 @@ created: 2026-03-22
 
 ## 二、整个库的导航主干
 ### 1. 主入口
-- [国际商务谈判智能体 MOC](/E:/Toby/Toby/00%20MOC/国际商务谈判智能体%20MOC.md)
+- [[00 MOC/国际商务谈判智能体 MOC]]
 - [[00 MOC/教师入口]]
 - [[00 MOC/学生入口]]
 - [[00 MOC/智能体入口]]
-- [国际商务谈判智能体总览.canvas](/E:/Toby/Toby/国际商务谈判智能体总览.canvas)
-- [03 对象库总览.canvas](/E:/Toby/Toby/03 对象库总览.canvas)
-- [系统使用说明.canvas](/E:/Toby/Toby/系统使用说明.canvas)
+
+> [!note] 关于 Canvas
+> `.canvas` 文件适合在 Obsidian 中使用。  
+> 在网页端，请优先使用 `README`、`MOC`、角色入口、工作台导航和模板导航。
 
 ### 2. 知识层
 用于解释概念、方法与价值边界。
@@ -173,8 +174,8 @@ Codex 是课程智能体执行层。
 - 把课堂训练的重点放在判断力、沟通力、边界意识和复盘能力上
 
 ## 九、推荐先看的入口
-- [国际商务谈判智能体 MOC](/E:/Toby/Toby/00%20MOC/国际商务谈判智能体%20MOC.md)
-- [国际商务谈判智能体总览.canvas](/E:/Toby/Toby/国际商务谈判智能体总览.canvas)
-- [课堂运行流程.canvas](/E:/Toby/Toby/课堂运行流程.canvas)
-- [知识概念图.canvas](/E:/Toby/Toby/知识概念图.canvas)
-- [系统使用说明.canvas](/E:/Toby/Toby/系统使用说明.canvas)
+- [[00 MOC/国际商务谈判智能体 MOC]]
+- [[00 MOC/教师入口]]
+- [[00 MOC/学生入口]]
+- [[02 工作台/工作台导航]]
+- [[90 模板/模板导航]]
