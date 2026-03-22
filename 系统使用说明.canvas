@@ -1,0 +1,316 @@
+{
+  "nodes": [
+    {
+      "id": "u100000000000001",
+      "type": "group",
+      "x": -100,
+      "y": -100,
+      "width": 2360,
+      "height": 1880,
+      "label": "系统使用说明",
+      "color": "4"
+    },
+    {
+      "id": "u100000000000002",
+      "type": "group",
+      "x": -40,
+      "y": 240,
+      "width": 700,
+      "height": 480,
+      "label": "三种工具",
+      "color": "5"
+    },
+    {
+      "id": "u100000000000003",
+      "type": "group",
+      "x": 740,
+      "y": 240,
+      "width": 1460,
+      "height": 480,
+      "label": "推荐路径",
+      "color": "2"
+    },
+    {
+      "id": "u100000000000004",
+      "type": "group",
+      "x": -40,
+      "y": 800,
+      "width": 2240,
+      "height": 860,
+      "label": "按角色使用",
+      "color": "3"
+    },
+    {
+      "id": "u100000000000005",
+      "type": "text",
+      "x": 40,
+      "y": 20,
+      "width": 860,
+      "height": 180,
+      "text": "# 系统使用说明\n\n这张图负责回答“怎么用”。\n\n如果首页 canvas 负责给你看结构，这张图负责告诉你：\n- 用什么工具\n- 按什么路径推进\n- 不同角色先看哪里",
+      "color": "4"
+    },
+    {
+      "id": "u100000000000006",
+      "type": "text",
+      "x": 40,
+      "y": 340,
+      "width": 180,
+      "height": 180,
+      "text": "## Obsidian\n\n主工作环境\n\n- 读知识\n- 开工作台\n- 填模板\n- 看 Canvas",
+      "color": "5"
+    },
+    {
+      "id": "u100000000000007",
+      "type": "text",
+      "x": 250,
+      "y": 340,
+      "width": 180,
+      "height": 180,
+      "text": "## NotebookLM\n\n资料提炼引擎\n\n- 读原始资料\n- 提炼概念\n- 补充案例与方法",
+      "color": "5"
+    },
+    {
+      "id": "u100000000000008",
+      "type": "text",
+      "x": 460,
+      "y": 340,
+      "width": 160,
+      "height": 180,
+      "text": "## Codex\n\n执行层智能体\n\n- 协助分析\n- 驱动工作流\n- 做模拟与复盘",
+      "color": "5"
+    },
+    {
+      "id": "u100000000000009",
+      "type": "text",
+      "x": 800,
+      "y": 320,
+      "width": 380,
+      "height": 250,
+      "text": "## 课前准备\n\n谈判准备工作台\n-> 谈判准备单\n-> 信息收集工作台\n-> 对手分析工作台\n-> 策略讨论工作台",
+      "color": "2"
+    },
+    {
+      "id": "u10000000000000a",
+      "type": "text",
+      "x": 1260,
+      "y": 320,
+      "width": 380,
+      "height": 250,
+      "text": "## 课堂中\n\n案例库\n-> 对手画像库\n-> 模拟演练工作台\n-> 模拟演练脚本\n-> 角色扮演与观察记录",
+      "color": "2"
+    },
+    {
+      "id": "u10000000000000b",
+      "type": "text",
+      "x": 1720,
+      "y": 320,
+      "width": 380,
+      "height": 250,
+      "text": "## 课后复盘\n\n复盘工作台\n-> 谈判复盘单\n-> 价值引导记录卡\n-> 回流到准备、分析或策略环节",
+      "color": "2"
+    },
+    {
+      "id": "u10000000000000c",
+      "type": "file",
+      "x": 60,
+      "y": 920,
+      "width": 240,
+      "height": 180,
+      "file": "00 MOC/教师入口.md"
+    },
+    {
+      "id": "u10000000000000d",
+      "type": "file",
+      "x": 340,
+      "y": 920,
+      "width": 240,
+      "height": 180,
+      "file": "00 MOC/学生入口.md"
+    },
+    {
+      "id": "u10000000000000e",
+      "type": "file",
+      "x": 620,
+      "y": 920,
+      "width": 240,
+      "height": 180,
+      "file": "00 MOC/智能体入口.md"
+    },
+    {
+      "id": "u10000000000000f",
+      "type": "text",
+      "x": 980,
+      "y": 900,
+      "width": 360,
+      "height": 220,
+      "text": "## 教师怎么用\n\n- 从教师入口进\n- 先选案例和活动\n- 用工作台组织任务\n- 用模板统一输出\n- 用复盘和价值引导做诊断",
+      "color": "3"
+    },
+    {
+      "id": "u100000000000010",
+      "type": "text",
+      "x": 1420,
+      "y": 900,
+      "width": 340,
+      "height": 220,
+      "text": "## 学生怎么用\n\n- 先看知识\n- 再进工作台\n- 把结论写进模板\n- 复盘时不只写结果，要写原因和改进",
+      "color": "3"
+    },
+    {
+      "id": "u100000000000011",
+      "type": "text",
+      "x": 1840,
+      "y": 900,
+      "width": 300,
+      "height": 220,
+      "text": "## 智能体怎么用\n\n- 先载入系统提示词\n- 优先定位当前阶段\n- 优先调用工作台与模板\n- 再用知识和对象库补充解释",
+      "color": "3"
+    },
+    {
+      "id": "u100000000000012",
+      "type": "file",
+      "x": 260,
+      "y": 1260,
+      "width": 260,
+      "height": 160,
+      "file": "README.md"
+    },
+    {
+      "id": "u100000000000013",
+      "type": "file",
+      "x": 580,
+      "y": 1260,
+      "width": 300,
+      "height": 160,
+      "file": "00 MOC/国际商务谈判智能体 MOC.md"
+    },
+    {
+      "id": "u100000000000014",
+      "type": "file",
+      "x": 940,
+      "y": 1260,
+      "width": 240,
+      "height": 160,
+      "file": "02 工作台总览.canvas"
+    },
+    {
+      "id": "u100000000000015",
+      "type": "file",
+      "x": 1240,
+      "y": 1260,
+      "width": 240,
+      "height": 160,
+      "file": "90 模板总览.canvas"
+    },
+    {
+      "id": "u100000000000016",
+      "type": "file",
+      "x": 1540,
+      "y": 1260,
+      "width": 240,
+      "height": 160,
+      "file": "03 对象库总览.canvas"
+    },
+    {
+      "id": "u100000000000017",
+      "type": "file",
+      "x": 1840,
+      "y": 1260,
+      "width": 260,
+      "height": 160,
+      "file": "国际商务谈判智能体总览.canvas"
+    }
+  ],
+  "edges": [
+    {
+      "id": "ue10000000000001",
+      "fromNode": "u100000000000006",
+      "fromSide": "right",
+      "toNode": "u100000000000007",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "ue10000000000002",
+      "fromNode": "u100000000000007",
+      "fromSide": "right",
+      "toNode": "u100000000000008",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "ue10000000000003",
+      "fromNode": "u100000000000009",
+      "fromSide": "right",
+      "toNode": "u10000000000000a",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "ue10000000000004",
+      "fromNode": "u10000000000000a",
+      "fromSide": "right",
+      "toNode": "u10000000000000b",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "ue10000000000005",
+      "fromNode": "u10000000000000c",
+      "fromSide": "right",
+      "toNode": "u10000000000000d",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "ue10000000000006",
+      "fromNode": "u10000000000000d",
+      "fromSide": "right",
+      "toNode": "u10000000000000e",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "ue10000000000007",
+      "fromNode": "u100000000000012",
+      "fromSide": "right",
+      "toNode": "u100000000000013",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "ue10000000000008",
+      "fromNode": "u100000000000013",
+      "fromSide": "right",
+      "toNode": "u100000000000014",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "ue10000000000009",
+      "fromNode": "u100000000000014",
+      "fromSide": "right",
+      "toNode": "u100000000000015",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "ue1000000000000a",
+      "fromNode": "u100000000000015",
+      "fromSide": "right",
+      "toNode": "u100000000000016",
+      "toSide": "left",
+      "toEnd": "arrow"
+    },
+    {
+      "id": "ue1000000000000b",
+      "fromNode": "u100000000000016",
+      "fromSide": "right",
+      "toNode": "u100000000000017",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "回到首页"
+    }
+  ]
+}
